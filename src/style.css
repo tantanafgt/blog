@@ -1,0 +1,11 @@
+article {
+  max-width: 40rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+.posted-date {
+  color: gray;
+}
