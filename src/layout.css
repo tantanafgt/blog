@@ -1,0 +1,273 @@
+:root {
+  --rawcolour-white: #fff;
+  --rawcolour-offwhite: #faf7f5;
+  --rawcolour-pink-medium: #f99;
+  --rawcolour-pink-light: #fbb;
+  --rawcolour-pink-xlight: #fee;
+  --rawcolour-black: #000;
+  --rawcolour-gold: #fc0;
+  --rawcolour-green-light: #afa;
+  --rawcolour-green-xlight: #bfb;
+  --rawcolour-brown-latte: rgb(217, 179, 140);
+
+  --bgc-pinstripe: var(--rawcolour-green-light);
+  --bgc-stripe-a: var(--rawcolour-pink-xlight);
+  --bgc-stripe-b: var(--rawcolour-offwhite);
+
+  --bg-stripes-candy: repeating-linear-gradient(to right,
+    var(--bgc-stripe-a),        var(--bgc-stripe-a) 1.5rem,
+    var(--bgc-stripe-b) 1.5rem, var(--bgc-stripe-b) 3rem
+  );
+  --bg-stripes-pinstripe: repeating-linear-gradient(to right,
+    var(--bgc-pinstripe) -0.1rem, var(--bgc-pinstripe) 0.1rem,
+    var(--bgc-stripe-a)   0.1rem, var(--bgc-stripe-a)  1.4rem,
+    var(--bgc-pinstripe)  1.4rem, var(--bgc-pinstripe) 1.6rem,
+    var(--bgc-stripe-b)   1.6rem, var(--bgc-stripe-b)  2.9rem
+  );
+  --bg-footer: var(--rawcolour-brown-latte);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+	font-family: Verdana;
+  background: var(--bg-stripes-candy);
+  color: #755;
+}
+
+header {
+	padding: 10px;
+	text-align:center;
+  font-family: serif;
+}
+
+footer {
+	background-color: var(--bg-footer);
+	text-align:center;
+	padding: 2rem;
+  margin-top: 2rem;
+}
+
+h2 {
+  border-radius: 10px;
+}
+
+#contactinfo {
+  text-align: left;
+}
+
+figure {
+  position: relative;
+}
+
+figure>.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: 500ms ease;
+}
+/*Chage image 'bird'*/
+figure>.overlay:hover {
+  opacity: 1;
+}
+/*input forms come center*/
+label {
+  display: inline-block;
+  width:200px;
+  text-align: center;
+}
+
+.rounded-border {
+  border-radius: 1rem;
+  border: solid 3px #555;    	/* 内側の線になる一本線の枠線をひく*/
+  outline: solid 1px #555;
+  outline-offset: -6px;        /* 外側の線と内側の線の空き具合を調整*/
+}
+
+.container {
+  background-color: white;
+  padding: 0.2rem 2rem;
+  margin: 1rem;
+  word-break: break-word;
+}
+
+/* Nav start */
+
+.nav {
+  text-align:center;
+  font-family: serif;
+  font-size: 20px;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+}
+.nav li {
+  display: inline-block;/* display in owhite*/
+  list-style-type: none;/* no dots*/
+  padding: 0.5rem;
+  margin: 0.5rem;
+  position: relative;
+}
+
+.nav a {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #755;
+}
+.nav a.current {
+  color: #f77;
+}
+.nav a:hover, .nav a:active {
+  /*chage color when mouce is over text*/
+	color: white;
+  background-color: pink;
+  border-radius: 0.5rem;
+}
+
+/*dropdown menu*/
+nav ul {
+  position: relative;
+  transition: all 0.5s ease;
+}
+nav li ul {
+  position: absolute;
+}
+nav li {
+  position: relative;
+}
+
+ul.nav_secondLevel, ul.nav_thirdLevel {
+  visibility: hidden;
+  opacity: 0;
+}
+
+li.nav_firstLevel:hover ul.nav_secondLevel,
+ul.nav_secondLevel li:hover ul.nav_thirdLevel {
+  visibility: visible;
+  opacity: 1;
+}
+
+li.nav_firstLevel:hover ul.nav_secondLevel {
+  top: 2.5rem;
+}
+ul.nav_secondLevel li:hover ul.nav_thirdLevel {
+  left: 95%;
+}
+
+.nav_secondLevel {
+  top: 3rem;
+
+  z-index: 1;
+  width: 10rem;
+  background-color: white;
+  word-break: break-word;
+}
+
+.nav_thirdLevel {
+  top: 0.5rem;
+
+  z-index: 2;
+  left: 105%;
+  width: 10rem;
+  background-color: white;
+  word-break: break-word;
+}
+
+/* Nav End */
+
+.main > figure {
+	float: center;
+
+}
+
+.eyecatcher{
+  width:auto;
+  height:auto;
+}
+
+
+
+/* Index page  */
+
+
+.eyecatcher img{
+  max-width:100%;
+  max-height:100%;
+  width:auto;
+  height:auto;
+}
+
+figure{
+  float: center;
+}
+
+.column-cells {
+  display: flex;
+  flex-wrap: wrap;
+  /* box-sizing: content-box; */
+  display: grid;
+  background-color: ;
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.right{
+  max-width: 550px;
+}
+
+.card {
+  background-color: lightyellow;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+}
+.card>.title {
+  font-size: 2rem;
+}
+
+.card-box {
+  display: grid;
+  background-color: ;
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-container {
+  background-color: pink;
+  border: 1px solid white;
+  padding: 0.5rem;
+  font-size: ;
+  text-align: center;
+}
+
+
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+ #column-cells{
+    grid-template-areas:
+    'header'
+	  'nav'
+    'left'
+    'right'
+	  'footer';
+
+  }
+
+
+
+
+}

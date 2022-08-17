@@ -1,0 +1,39 @@
+{
+  "arcana": [
+    {
+      "id": "major",
+      "name": {
+        "en_AU": "Major",
+        "jp_JP": "",
+      }
+    }
+  ]
+  "suits": [],
+  "elements": [
+    {
+      "id": "air"
+      "name": {
+        "en_AU": "Air",
+        "jp_JP": "",
+      }
+    }
+  ],
+  "cards": {
+    "rws": [
+      {
+        "number": 0,
+        "name": {
+          "en_AU": "The Fool",
+          "jp_JP": "ザ　フール",
+        },
+        "arcana": "Major",
+        "suits": [],
+        "keywords": {
+          "en_AU": ["Beginnings", "Innocence", "Clear Conscience", "Risk"],
+          "jp_JP": [],
+        },
+        "element": "air"
+      }
+    ]
+  }
+}

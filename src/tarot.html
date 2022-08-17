@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="layout.css" />
+	<title>Cake and Tea Break</title>
+</head>
+<body>
+	<div id="box">
+		<header>
+			<h1 class="title">Cake and Tea Break</h1>
+		</header>
+
+		<nav></nav>
+
+	  <div class="main container rounded-border">
+			<h2>Tarot</h2>
+			<br/>
+			<p>daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+
+	  </div>
+
+		<footer>© copyright Cake and Tea Break</footer>
+	</div>
+
+	<script src="tarot.js"></script>
+	<script src="nav.js"></script>
+	<script type="text/javascript">
+		const nav = (document.getElementsByTagName("nav") || [null])[0]
+		nav.innerHTML = getMenuHtml('tarot')
+
+	</script>
+</body>
+</html>

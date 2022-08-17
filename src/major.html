@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="layout.css" />
+	<title>Cake and Tea Break</title>
+</head>
+<body>
+	<div id="box">
+		<header>
+			<h1 class="title">Cake and Tea Break</h1>
+		</header>
+
+		<nav></nav>
+
+	  <div class="main container rounded-border">
+			<h2>Welcome to Cake and Tea Break</h2>
+			<br/>
+			<div class="card-box">
+				<div class="card-container" id="card-sample-major">fsd</div>
+				<div class="card-container">gdf</div>
+				<div class="card-container">fgdf</div>
+				<div class="card-container">fgd</div>
+				<div class="card-container">dfgdf</div>
+				<div class="card-container">dfgd</div>
+				<div class="card-container">dfgd</div>
+				<div class="card-container">fdf</div>
+				<div class="card-container" id="card-sample-minor">fgd</div>
+
+			</div>
+
+	  </div>
+
+		<footer>© copyright Cake and Tea Break</footer>
+	</div>
+
+	<script src="tarot.js"></script>
+	<script src="nav.js"></script>
+	<script type="text/javascript">
+		const nav = (document.getElementsByTagName("nav") || [null])[0]
+		nav.innerHTML = getMenuHtml('tarot')
+
+		document.getElementById("card-sample-major").innerHTML = renderMajorSample()
+		document.getElementById("card-sample-minor").innerHTML = renderMinorSample()
+	</script>
+</body>
+</html>
