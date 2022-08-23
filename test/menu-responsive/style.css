@@ -1,0 +1,84 @@
+:root {
+  --triangle-right: '  \25B9  ';
+  --triangle-down: '  \25BF  ';
+  --plus: '  +  ';
+  --minus: '  \2212  ';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div.content {
+  margin: 0 auto;
+  max-width: 65rem;
+}
+
+div.content > div {
+  border: 0.25rem solid black;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* menu style */
+
+nav ul {
+  border: 0.25rem solid brown;
+  border-radius: 1rem;
+  padding-inline-start: 0;
+  background-color: white;
+}
+
+nav li {
+  border-radius: 0.5rem;
+  list-style: none;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+nav li:hover {
+  background-color: pink;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+nav > ul ul {
+  position: absolute;
+  margin-left: 2rem;
+  width: 12rem;
+}
+
+nav label {
+  display: flex;
+}
+
+nav label::after {
+  flex-grow: 1;
+}
+
+nav label::after {
+  content: var(--plus);
+  text-align: right;
+  min-width: 1rem;
+}
+
+nav input[type=checkbox]:checked ~ label::after {
+  content: var(--minus);
+}
+
+/* menu behaviour */
+
+nav input {
+  display: none;
+}
+
+nav .submenu {
+  display: none;
+}
+
+nav input[type=checkbox]:checked ~ .submenu,
+nav li:hover > .submenu {
+  display: block;
+}
